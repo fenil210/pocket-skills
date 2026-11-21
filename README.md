@@ -40,6 +40,3 @@ npx skills add fenil210/pocket-skills --skill maintainable-changes
 
 Add `-g` to install for your user across projects. For manual installation, copy the entire skill folder into your agent's skills directory. Codex uses `.agents/skills/` for a project, and Claude Code uses `.claude/skills/`.
 
-## Credits and license
-
-I originally published `build-portfolio-site`, `test-audit`, and `writing-good-tests` in [shipshape-skills](https://github.com/fenil210-cactus/shipshape-skills). I included `prune-tests` from [caldoai/skills](https://github.com/caldoai/skills/tree/main/skills/prune-tests). Their license notices are in the respective skill folders. My original work in this collection is available under the [MIT License](LICENSE).
