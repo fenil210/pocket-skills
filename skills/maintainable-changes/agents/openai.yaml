@@ -1,0 +1,4 @@
+interface:
+  display_name: "Maintainable Changes"
+  short_description: "Keep code changes easy to revise and safe to ship"
+  default_prompt: "Use $maintainable-changes to review this diff for maintenance costs and identify the smallest change that protects real callers."
