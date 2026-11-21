@@ -1,35 +1,45 @@
 # Pocket Skills
 
-A collection of practical skills for coding agents. Pick the one that fits the work and keep its instructions and references close to your agent.
+I collect skills that help coding agents build and maintain software. Each skill includes instructions and any supporting references it needs.
 
 ## Skills
 
-| Skill | What it helps with |
+| Skill | Use it to |
 | --- | --- |
-| [maintainable-changes](skills/maintainable-changes/SKILL.md) | Make changes that stay easy to understand and revise, with judgment around comments, tests, compatibility and abstractions. |
-| [writing-good-tests](skills/writing-good-tests/SKILL.md) | Write tests that catch meaningful regressions without unnecessary mocks and test bloat. |
-| [test-audit](skills/test-audit/SKILL.md) | Audit a test suite for low-value, duplicate and implementation-coupled tests while preserving useful coverage. |
-| [prune-tests](skills/prune-tests/SKILL.md) | Find and remove tests that do not protect behavior. |
-| [build-portfolio-site](skills/build-portfolio-site/SKILL.md) | Plan, build and deploy a personal portfolio, with guidance for design, search and AI visibility. |
+| [maintainable-changes](skills/maintainable-changes/SKILL.md) | Make code changes that stay readable and easy to maintain. |
+| [writing-good-tests](skills/writing-good-tests/SKILL.md) | Write tests that catch meaningful regressions. |
+| [test-audit](skills/test-audit/SKILL.md) | Review a test suite for weak, duplicate or brittle coverage. |
+| [prune-tests](skills/prune-tests/SKILL.md) | Remove tests that don't protect behavior. |
+| [build-portfolio-site](skills/build-portfolio-site/SKILL.md) | Build and deploy a personal portfolio site. |
 
 ## Install
 
-Run this in your project and choose the skills and agents you want.
+Give your coding agent the repository link and ask it to install the skills you want:
 
-```sh
-npx skills add fenil210/pocket-skills
+```text
+Install all skills from https://github.com/fenil210/pocket-skills for this project.
 ```
 
-To install a single skill, use its name.
+Or ask for a specific skill:
+
+```text
+Install maintainable-changes from https://github.com/fenil210/pocket-skills for this project.
+```
+
+You can also run the [skills CLI](https://github.com/vercel-labs/skills) yourself. To install all skills, then choose your agent:
+
+```sh
+npx skills add fenil210/pocket-skills --skill '*'
+```
+
+To install one skill, replace the name with any skill from the table:
 
 ```sh
 npx skills add fenil210/pocket-skills --skill maintainable-changes
 ```
 
-Add `-g` to install across projects. The [skills CLI](https://github.com/vercel-labs/skills) supports Codex, Claude Code and other agents.
+Add `-g` to install for your user across projects. For manual installation, copy the entire skill folder into your agent's skills directory. Codex uses `.agents/skills/` for a project, and Claude Code uses `.claude/skills/`.
 
-You can also copy a complete skill directory from `skills/` into your agent's skills directory. For project-specific installations, Codex uses `.agents/skills/` and Claude Code uses `.claude/skills/`. Keep all references and license files together with `SKILL.md`.
+## Credits and license
 
-## Origins and licenses
-
-`maintainable-changes` is part of this collection. `build-portfolio-site`, `test-audit`, and `writing-good-tests` come from [shipshape-skills](https://github.com/fenil210-cactus/shipshape-skills). `prune-tests` comes from [caldoai/skills](https://github.com/caldoai/skills/tree/main/skills/prune-tests). The imported skills retain their original license notices in their directories. `test-audit` includes its upstream OpenClaw Foundation license and the shipshape repository license.
+I originally published `build-portfolio-site`, `test-audit`, and `writing-good-tests` in [shipshape-skills](https://github.com/fenil210-cactus/shipshape-skills). I included `prune-tests` from [caldoai/skills](https://github.com/caldoai/skills/tree/main/skills/prune-tests). Their license notices are in the respective skill folders. My original work in this collection is available under the [MIT License](LICENSE).
